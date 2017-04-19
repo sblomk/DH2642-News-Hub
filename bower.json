@@ -1,0 +1,24 @@
+{
+  "name": "iprog-project",
+  "description": "",
+  "vesrion": "0.0.0",
+  "homepage": "https://github.com/LynxLynn/iprog-project.git",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "1.6.x",
+    "angular-mocks": "1.6.x",
+    "jquery": "~2.1.1",
+    "bootstrap": "~3.x",
+    "angular-route": "1.6.x",
+    "angular-resource": "1.6.x",
+    "angular-animate": "1.6.x",
+    "angular-ui-router": "1.0.0-beta.3",
+    "angularfire": "^2.3.0",
+    "firebase": "^3.7.4",
+    "requirejs": "^2.3.3",
+    "ng-twitter-api": "^0.1.5",
+    "angular-dragdrop": "^1.0.13",
+    "angular-xeditable": "^0.7.0"
+  }
+}

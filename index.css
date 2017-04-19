@@ -1,0 +1,549 @@
+body {
+  /*background-color: #1a1a1a;*/
+  background-color: black;
+  height: 100%;
+  width: 100%
+  margin: 0;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -50px;
+}
+
+.logo-container {
+  /*height: 120px;*/
+  display: inline-block;
+  margin: 10px;
+  width: 200px;
+  height: 120px;
+  background-color: #ef6040;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-container:hover {
+  margin: 10px;
+  width: 200px;
+  height: 120px;
+  background-color: #ff6b49;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 5px 15px #b5b5b5;
+}
+
+.logo-container-static {
+  /*height: 120px;*/
+  /*display: inline-block;*/
+  margin: 10px;
+  width: 200px;
+  height: 120px;
+  background-color: #ef6040;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*
+.test {
+  /*height: 120px;*/ /*
+  display: inline-block; */
+  /*background-color: white;*/
+  /*float: left;*/
+  /*margin-top: 30%;*/ /*
+  width: 200px;
+  height: 120px;
+} */
+
+.all-logo-container {
+  margin-left: 20%;
+  /*margin-right: 20%;*/
+  position:
+  absolute;
+  top:20%;
+}
+
+.favorites-container {
+  margin-left: 20%;
+  top:20%;
+}
+
+.filler-m {
+  width: 400px;
+  height: 150px;
+  /*background-color: #FF0000; for testing*/
+}
+
+.filler-s {
+  width: 400px;
+  height: 20px;
+}
+
+
+.image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.image_top {
+  width: auto;
+  height: 150px;
+}
+
+.border {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin-bottom: 5px;
+  border-color: white;
+}
+
+.article-container {
+  /*border: 1px solid #404040;*/
+  /*border-radius: 4px;*/
+  margin: 10px;
+  display: inline-block;
+  background-color: #bababa;
+  width: 400px;
+  height: 200px;
+  overflow-y: scroll;
+  color:black;
+  font-family: times new roman;
+  padding: 3px;
+}
+
+.article-container:hover {
+  margin: 10px;
+  display: inline-block;
+  background-color: #bababa;
+  width: 400px;
+  height: 200px;
+  overflow-y: scroll;
+  color:black;
+  font-family: times new roman;
+  padding: 3px;
+  box-shadow: 0px 5px 15px #cecece;
+}
+
+/*
+.article-container:active {
+  border-radius: 25px;
+  margin: 10px;
+  display: inline-block;
+  background-color: #bababa;
+  width: 200px;
+  height: 100px;
+  overflow-y: scroll;
+  color:black;
+  font-family: times new roman;
+  padding: 3px;
+  box-shadow: 0px 5px 15px #cecece;
+}*/
+
+.article-container::-webkit-scrollbar
+{
+  display: none;
+}
+
+.center-articles {
+  /*margin-left: 250px;*/
+  /*margin-right: 250px;*/
+  /*width: 1400px;*/
+  height: auto;
+}
+
+.search-control {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  width: 500px;
+  height: 35px;
+  margin-bottom: 40px;
+}
+
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+  right: 725px;
+}
+
+.form {
+  margin-bottom: 40px;
+}
+
+.footer, .push {
+  background-color: #222;
+  width: 100%;
+  height: 70px;
+  z-index: 300;
+  position: relative;
+}
+
+.first-page {
+  display: none;
+  text-align: center;
+  /*background-color: #1a1a1a;*/
+}
+
+/*.navbar-inverse {
+  border-radius: 0px;
+  border: none;
+}
+
+.navbar .navbar-nav {
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+  /*width: 500px;*/
+  /*display: inline-block;*/
+  /*float: none;*/
+
+
+/*.active {
+  opacity: 1;
+  border-top: 4px solid #fff;
+}*/
+/*a:hover {
+  color: white;
+  border-top: 4px solid #fff;
+}*/
+
+.has-text-centered {
+  text-align: center;
+  color: #9d9d9d;
+}
+
+.overlay {
+  position: absolute;
+  display: none;
+}
+
+.modal-content {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  color: white;
+  /*width: 1000px;*/
+}
+
+.modal.custom .modal-dialog {
+    width: 40%;
+    /*background-color: black;*/
+    /*margin:0 auto;*/
+    /*add what you want here*/
+}
+
+.modal-title {
+  text-align: center;
+}
+
+.first-page {
+  margin-top: 100px;
+  font-size: 60px;
+  font-family: times new roman;
+  font-weight: bold;
+  color:white;
+}
+
+/*De olika kategori "viewerna"*/
+
+.category-title {
+  font-weight:bold;
+  font-size:50px;
+  position:absolute;
+  top:64px;
+  margin-left:20%
+}
+
+.category-title-slim {
+  font-weight:bold;
+  font-size:50px;
+  position:absolute;
+  top:64px;
+}
+
+.first {
+  width: 100%;
+  height: 1000px;
+  background-color: #f4f4f4;
+}
+
+.sport {
+  /*margin-top: 20%;*/
+  width: 100%;
+  height: 1000px;
+  background-color: #d8d8d8;
+  position: relative;
+  /*margin-left:300px;*/
+
+}
+
+.business {
+  width: 100%;
+  height: 1000px;
+  background-color: #f4f4f4;
+  position: relative;
+
+}
+
+.science-and-nature {
+  width: 100%;
+  height: 1000px;
+  background-color: #d8d8d8;
+  position: relative;
+}
+
+.entertainment {
+  width: 100%;
+  height: 1000px;
+  background-color: #f4f4f4;
+  position: relative;
+}
+
+.music {
+  width: 100%;
+  height: 1000px;
+  background-color: #d8d8d8;
+  position: relative;
+}
+
+.politics {
+  width: 100%;
+  height: 1000px;
+  background-color: #f4f4f4;
+  position: relative;
+}
+
+.technology {
+  width: 100%;
+  height: 1000px;
+  background-color: #d8d8d8;
+  position: relative;
+}
+
+/*Favorite categories*/
+.faveA {
+  width: 100%;
+  height: auto;
+  min-height: 1000px;
+  background-color: #f4f4f4;
+  position: relative;
+}
+
+.faveB {
+  width: 100%;
+  height: auto;
+  min-height: 1000px;
+  background-color: #d8d8d8;
+  position: relative;
+}
+
+
+/*SIDEBAR */
+.lynn {
+  position: fixed;
+  height: 450px;
+  width: 300px;
+  left: 0px;
+  z-index: 100;
+  padding: 0;
+  margin-top: 54px;
+  /*border: 5px solid white;*/
+  /*display: block;*/
+}
+
+.lynn .menu {
+  border-top: 3px solid black;
+  border-bottom: none;
+  background-color: #2d323d;
+}
+
+.lynn .menu p {
+  font-size: 27px;
+  /*margin-top: 0;*/
+}
+
+.nav .sidebar {
+  /*margin-top: 50px;*/
+  width: 100%;
+  height: 100%;
+  /*border-right: 3px solid black;*/
+}
+
+.lynn p {
+  font-size: 20px;
+  font-family: times;
+  color: white;
+  /*margin-top: 5%;*/
+}
+
+.lynn li {
+  height: 50px;
+  border-bottom: 2px solid black;
+}
+
+.lynn li:hover {
+  padding: 0;
+  background-color: #2d323d;
+  color: white;
+}
+
+/* SIDEBARE DROP ZONES */
+
+.drop {
+  position: fixed;
+  height: 450px;
+  width: 300px;
+  left: 0px;
+  z-index: 100;
+  padding: 0;
+  margin-top: 54px;
+  /*border: 5px solid white;*/
+  /*display: block;*/
+}
+
+.drop .topline {
+  border-top: 3px solid black;
+}
+
+.nav .sidebar {
+  /*margin-top: 50px;*/
+  width: 100%;
+  height: 100%;
+  /*border-right: 3px solid black;*/
+}
+
+.drop p {
+  font-size: 20px;
+  font-family: times;
+  color: white;
+  /*margin-top: 5%;*/
+}
+
+.drop li {
+  height: 150px;
+  border-bottom: 2px solid black;
+}
+
+.drop li:hover {
+  padding: 0;
+  background-color: #2d323d;
+  color: white;
+}
+
+
+/*NAVIGATIONBAR*/
+
+.top {
+  position: fixed;
+  width: 100%;
+  z-index: 200;
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul {
+  background-color: #424959;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  /*margin-bottom: 10%;*/
+  /*position: fixed;*/
+  /*display: block;*/
+  /*border-top: 4px solid #404040;*/
+}
+
+.nav li {
+  text-align: left;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  /*padding-left: 15px;*/
+  text-align: center;
+}
+
+.nav a:hover {
+  padding: 0;
+  background-color: #333333;
+  color: white;
+  border-top: 4px solid #fff;
+}
+
+.active {
+  cursor: default;
+  opacity: 1;
+  border-top: 4px solid #fff;
+}
+
+/* Sub Menus */
+.nav li li {
+  font-size: .8em;
+}
+
+/*******************************************
+   Style menu for larger screens
+
+   Using 650px (130px each * 5 items), but ems
+   or other values could be used depending on other factors
+********************************************/
+
+@media screen and (min-width: 650px) {
+  .nav .topMenu li {
+    width: 130px;
+    border-bottom: none;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    font-family: times;
+    display: inline-block;
+    margin-right: -4px;
+  }
+
+  .nav a {
+    border-bottom: none;
+  }
+
+  .nav > ul > li {
+    text-align: center;
+  }
+
+  .nav > ul > li > a {
+    padding-left: 0;
+  }
+
+  /* Sub Menus */
+  .nav li ul {
+    position: absolute;
+    display: none;
+    width: inherit;
+  }
+
+  .nav li:hover ul {
+    display: block;
+  }
+
+  .nav li ul li {
+    display: block;
+  }
+}

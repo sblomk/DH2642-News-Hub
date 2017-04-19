@@ -1,0 +1,87 @@
+<html ng-app="articleApp">
+  <head>
+    <title>News Hub</title>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <!-- xeditable text -->
+    <link href="bower_components/angular-xeditable/dist/css/xeditable.css" rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- <script src="bower_components/firebase/firebase.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+    <script>// Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDciIZhsBJu0fnWPY9HbJvkmeiH9V14ebM",
+      authDomain: "iprog-project-82002.firebaseapp.com",
+      databaseURL: "https://iprog-project-82002.firebaseio.com/",
+      projectId: "iprog-project-82002",
+      storageBucket: "iprog-project-82002.appspot.com",
+      messagingSenderId: "1004289979823"
+    };
+    firebase.initializeApp(config);
+    </script>
+
+    <!-- Jquery & bootstrap -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Angular -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-mocks/angular-mocks.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angularfire/dist/angularfire.min.js"></script>
+    <script src="bower_components/ng-twitter-api/dist/ng-twitter-api.min.js"></script>
+    <script src="bower_components/angular-dragdrop/src/angular-dragdrop.min.js"></script>
+    <script src="bower_components/angular-xeditable/dist/js/xeditable.js"></script>
+
+    <!-- My scripts -->
+    <script src="js/helloworld.js"></script>
+    <script src="js/articleService.js"></script>
+    <script src="js/articleCtrl.js"></script>
+
+    <!-- Styles -->
+    <style></style>
+  </head>
+
+<!-- onload kallar på funktionen vid page load -->
+  <body onload='toggleFirstPage()'>
+    <!-- <div ng-include="'partials/test'"></div> -->
+      <div class="wrapper">
+          <ui-view></ui-view>
+          <div class="push"></div>
+      </div>
+    <div ng-include="'partials/footer'"></div>
+  </body>
+
+  <!-- Firebase -->
+
+  <!-- <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script> -->
+
+  <!-- Animationer -->
+  <script>
+  function toggleFirstPage(){
+    $(".first-page").fadeIn(2500);
+  }
+
+  function testScroll(id) {
+  // var id = document.getElementById("id");
+  var specCat = '".' + id + '"' ;
+  console.log(specCat);
+  // $(this).click(function() {
+    $('html,body').animate({
+        scrollTop: $("." + id).offset().top},
+        'slow');
+// });
+}
+  </script>
+
+</html>

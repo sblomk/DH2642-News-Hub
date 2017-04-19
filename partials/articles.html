@@ -1,0 +1,98 @@
+<div ng-include="'partials/test'"></div>
+<div class"wrapper" style="background-color:#f4f4f4;">
+  <div class="row box">
+    <div class="col-md-12">
+      <center>
+        <div ng-controller="ArticleCtrl">
+          <div ng-repeat="logo in logos" class="logo-container-static">
+            {{logo.logo}}
+        </div>
+        <!-- <div ng-init="get_logo()" id='logo'></div> -->
+        <!-- </div> -->
+        <!-- lite krångligt sätt att hämta bild på den källan man är inne på -->
+        <!-- ovanstående utkommenterad kod funkar men det sparas lolkat så om man reloadar sidan så försvinner bilden -->
+        <!-- <img ng-src="{{imageTest == 'the-new-york-times' && 'images/unnamed.png' ||
+                             imageTest == 'bbc-news' && 'images/bbc_news_logo.png' ||
+                             imageTest == 'national-geographic' && 'images/natGeo.png' ||
+                             imageTest == 'entertainment-weekly' && 'images/ew_logo.png' ||
+                             imageTest == 'ign' && 'images/ign_logo.png' ||
+                             imageTest == 'time' && 'images/time_logo.png'}}" class="image_top" style="margin-bottom:40px;margin-top:40px;"></img> -->
+      </center>
+    </div>
+
+  <!-- <div class="col-md-12"> -->
+        <div class="center-articles" ng-controller="ArticleCtrl" ng-init="get_article()">
+          <center>
+            <div class="article-container" ng-repeat="articles in article" ng-click="select(articles)" data-toggle="modal" data-target="#example">
+                  <h2>{{articles.title}}</h2>
+                  <div class="border">
+                    <h4>By:{{articles.author}} </h4>
+                    <p>{{articles.publishedAt | date}}</p>
+                  </div>
+                <p>{{articles.description}}</p>
+            </div>
+          </center>
+        <!-- </div> -->
+
+        <!-- Modelen är rutan som poppar upp när man klickar på en artikel -->
+        <div class="modal custom fade" id="example" role="dialog">
+          <div class="modal-dialog">
+              <div class="modal-content">
+
+
+
+                <div class="row">
+                    <!-- <div class="col-md-6"> -->
+                    <center>
+                      <div class="modal-body" style="padding-right: 20px; border-right: 4px solid #ccc;margin:20px;">
+                        <h1 id="title">{{selected.title}}</h1>
+                        <img ng-src="{{selected.urlToImage}}" class="image"></img>
+                        <h4>By:{{selected.author}} </h4>
+                        <p>{{selected.publishedAt | date}}</p>
+                        <p>{{selected.description}}</p>
+                        <a href="{{selected.url}}">Click to read whole article</a>
+                      </div>
+
+              <!-- </div> -->
+              <!-- <div class="col-md-6">
+                  <div class="modal-body">
+                    DENNA SIDA ÄR FÖR TWITTER
+                  </div>
+              </div> -->
+            </center>
+            </div>
+
+            <center><button type="button" class="btn" ng-click="test_fb(selected)">Add to favorites</button></center>
+
+              <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div> -->
+
+          </div>
+        </div>
+
+    </div>
+  </div>
+
+</div>
+</div>
+</div>
+
+<!-- saveArticle(selected) -->
+
+<!-- <script>
+var dbRef = new Firebase("https://iprog-project-82002.firebaseio.com");
+var testRef = dbRef.child('test');
+
+$(".btn").on("click", function(event){
+  console.log("Kommer vi in i firebase?");
+  event.preventDefault();
+  {test
+  .push({
+    Title: $('#title').val()
+  })
+}
+console.log(test);
+});
+</script> -->

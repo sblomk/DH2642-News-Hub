@@ -1,0 +1,170 @@
+<!-- <div ng-include="'partials/firebase_'"></div> -->
+
+<div ng-include="'partials/test'"></div>
+<div class="wrapper">
+  
+  <!-- Old hardcoded nav top 
+  <div class="nav top">
+    <ul class="topMenu">
+      <li><a ui-sref="view" ui-sref-active="active">Articles</a>
+      </li>
+      <li><a ui-sref="favorites" ui-sref-active="active">Favorites</a></li>
+      <li><a ui-sref="contact" ui-sref-active="active">Contact</a></li>
+    </ul>
+    </div> -->
+
+    <!-- <div class="background"> -->
+    <div class="col-md-3">
+      <div class="nav lynn">
+        <ul class="sidebar">
+          <li class="menu"><p>Menu</p></li>
+          <li style="border-top:2px solid black;"><p id="first" onclick="testScroll(id)">Top</p></li>
+          <li><p id="sport" onclick="testScroll(id)">Sport</p></li>
+          <li><p id="business" onclick="testScroll(id)">Business</p></li>
+          <li><p id="science-and-nature" onclick="testScroll(id)">Science and Nature</li>
+            <li><p id="entertainment" onclick="testScroll(id)">Entertainment</li>
+              <li><p id="music" onclick="testScroll(id)">Music</li>
+                <li><p id="politics" onclick="testScroll(id)">Politics</li>
+                  <li><p id="technology" onclick="testScroll(id)">Technology</li>
+                  </ul>
+                </div>
+              </div>
+
+
+      <!-- <div class="first"> -->
+      <!-- <div class="row"> -->
+
+        <!-- <div class="lynn"> -->
+      <!-- </div> -->
+      <!-- <div class="col-md-6"> -->
+        <div class="first" ng-controller="ArticleCtrl" ng-init="get_article_category('general')">
+          <div class="all-logo-container">
+              <h1 style="font-weight:bold;font-size:50px;">GENERAL</h1>
+              <div ng-repeat="category in article_category" style="display:inline-block;">
+                <div class="logo-container" ng-click="select(category.name);set_logo(selected)" ui-sref="articles({contactId:'{{category.id}}'})">
+                  {{category.name}}
+                </div>
+              </div>
+          </div>
+        </div>
+      <!-- </div> -->
+        <!-- <div>
+          <center>
+            <h1 style="color: white;margin-top:54px;"> Articles </h2>
+
+            <div class="logo-container" ui-sref="articles({contactId:'the-new-york-times'})"><img src="images/unnamed.png" class="image"></img></div>
+            <div class="logo-container" ui-sref="articles({contactId:'bbc-news'})"><img src="images/bbc_news_logo.png" class="image"></img></div>
+            <div class="logo-container" ui-sref="articles({contactId: 'national-geographic'})"><img src="images/natGeo.png" class="image"></img></div>
+            <div class="logo-container" ui-sref="articles({contactId: 'entertainment-weekly'})"><img src="images/ew_logo.png" class="image"></img></div>
+            <div class="logo-container" ui-sref="articles({contactId: 'ign'})"><img src="images/ign_logo.png" class="image"></img></div>
+            <div class="logo-container" ui-sref="articles({contactId: 'time'})"><img src="images/time_logo.png" class="image"></img></div>
+          <center>
+        </div> -->
+      <!-- </div> -->
+      <!-- </div> -->
+    <!-- </div> -->
+  <!-- </div> -->
+
+  <div class="sport" ng-controller="ArticleCtrl" ng-init="get_article_category('sport');">
+    <!-- <div class="col-md-6"> -->
+    <h1 class="category-title">SPORTS</h1>
+    <div class="all-logo-container">
+      <!-- <center> -->
+        <div ng-repeat="category in article_category" style="display:inline-block;">
+          <!-- <div ng-init="select(category.urlsToLogos.small)"></div> -->
+          <div class="logo-container" ng-click="select(category.name);set_logo(selected)" ui-sref="articles({contactId:'{{category.id}}'})">
+            {{category.name}}
+          </div>
+        </div>
+      <!-- </center> -->
+    </div>
+  </div>
+
+  <div class="business"  ng-controller="ArticleCtrl" ng-init="get_article_category('business')";>
+    <h1 class="category-title">BUSINESS</h1>
+    <div class="all-logo-container">
+      <!-- <center> -->
+        <div ng-repeat="category in article_category" style="display:inline-block;">
+          <div class="logo-container test" ng-click="select(category.name);set_logo(selected)" ui-sref="articles({contactId:'{{category.id}}'})">
+            {{category.name}}
+          </div>
+        </div>
+      <!-- </center> -->
+    </div>
+  </div>
+
+  <div class="science-and-nature" ng-controller="ArticleCtrl" ng-init="get_article_category('science-and-nature')";>
+    <h1 class="category-title">SCIENCE AND NATURE</h1>
+    <div class="all-logo-container">
+      <!-- <center> -->
+        <div ng-repeat="category in article_category" style="display:inline-block;">
+          <div class="logo-container test" ng-click="select(category.name);set_logo(selected)" ui-sref="articles({contactId:'{{category.id}}'})">
+            {{category.name}}
+          </div>
+        </div>
+      <!-- </center> -->
+    </div>
+  </div>
+
+  <div class="entertainment" ng-controller="ArticleCtrl" ng-init="get_article_category('entertainment')">
+    <h1 class="category-title">ENTERTAINMENT</h1>
+    <div class="all-logo-container">
+      <!-- <center> -->
+        <div ng-repeat="category in article_category" style="display:inline-block;">
+          <div class="logo-container test" ng-click="select(category.name);set_logo(selected)" ui-sref="articles({contactId:'{{category.id}}'})">
+            {{category.name}}
+          </div>
+        </div>
+      <!-- </center> -->
+    </div>
+  </div>
+
+  <div class="music" ng-controller="ArticleCtrl" ng-init="get_article_category('music')">
+    <h1 class="category-title">MUSIC</h1>
+    <div class="all-logo-container">
+      <!-- <center> -->
+        <div ng-repeat="category in article_category" style="display:inline-block;">
+          <div class="logo-container test" ng-click="select(category.name);set_logo(selected)" ui-sref="articles({contactId:'{{category.id}}'})">
+            {{category.name}}
+          </div>
+        </div>
+      <!-- </center> -->
+    </div>
+  </div>
+
+  <div class="politics" ng-controller="ArticleCtrl" ng-init="get_article_category('politics')">
+    <h1 class="category-title">POLITICS</h1>
+    <div class="all-logo-container">
+      <!-- <center> -->
+        <div ng-repeat="category in article_category" style="display:inline-block;">
+          <div class="logo-container test" ng-click="select(category.name);set_logo(selected)" ui-sref="articles({contactId:'{{category.id}}'})">
+            {{category.name}}
+          </div>
+        </div>
+      <!-- </center> -->
+    </div>
+  </div>
+
+  <div class="technology" ng-controller="ArticleCtrl" ng-init="get_article_category('technology')">
+    <h1 class="category-title">TECHNOLOGY</h1>
+    <div class="all-logo-container">
+      <!-- <center> -->
+        <div ng-repeat="category in article_category" style="display:inline-block;">
+          <div class="logo-container test" ng-click="select(category.name);set_logo(selected)" ui-sref="articles({contactId:'{{category.id}}'})">
+            {{category.name}}
+          </div>
+        </div>
+      <!-- </center> -->
+    </div>
+  </div>
+
+  <!-- <div class="general" ng-controller="ArticleCtrl" ng-init="get_article_category('general')">
+    <div class="all-logo-container">
+        <h1>GENERAL</h1>
+        <div ng-repeat="category in article_category" style="display:inline-block;">
+          <div class="logo-container test" ui-sref="articles({contactId:'{{category.id}}'})"><img ng-src="{{category.urlsToLogos.small}}" class="image"></img></div>
+        </div>
+    </div>
+  </div> -->
+</div>
+<!-- </div> -->

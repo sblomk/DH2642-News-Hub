@@ -1,0 +1,150 @@
+<div ng-include="'partials/test'"></div>
+
+<div class="wrapper" ng-controller="ArticleCtrl" style="background-color:#f4f4f4;">
+
+  <div class="col-md-3">
+    <div class="nav drop">
+      <ul class="sidebar">
+        <div class="topline"></div>
+        <!-- <li class="menu"><p>Folders</p></li>
+        <li><p id="favorites" onclick="testScroll(id)">Favorites</p></li> -->
+
+        <li data-drop="true" jqyoui-droppable="{onDrop: 'likeDrop(selected)'}"><div class="nav lynn">  <!-- onDrop: 'remove_article(selected)' vill jag ha här för att ta bort favoriten när du har droppat den i likes-->
+          <font color="black"><p id="fave1" editable-text="likeName1[0]" onaftersave="setLikeName1(likeName1[0])" >{{likeName1[0]}}</p></font>
+        </div></li>
+
+        <li data-drop="true" jqyoui-droppable="{onDrop: 'like2Drop(selected)'}"><div class="nav lynn">  <!-- onDrop: 'remove_article(selected)' vill jag ha här för att ta bort favoriten när du har droppat den i likes-->
+          <font color="black"><p id="fave2" editable-text="likeName2[0]" onaftersave="setLikeName2(likeName2[0])">{{likeName2[0]}}</p></font>
+        </div></li>
+
+        <li data-drop="true" jqyoui-droppable="{onDrop: 'like3Drop(selected)'}"><div class="nav lynn">  <!-- onDrop: 'remove_article(selected)' vill jag ha här för att ta bort favoriten när du har droppat den i likes-->
+          <font color="black"><p id="fave3" editable-text="likeName3[0]" onaftersave="setLikeName3(likeName3[0])">{{likeName3[0]}}</p></font>
+        </div></li>
+
+
+      </ul>
+     </div>
+  </div>
+
+    <h1>Favorite articles
+    <button type="button" ng-click="orderArticles()">A-Z</button>
+    <button type="button" ng-click="orderArticlesZ()">Z-A</button>
+    <button type="button" ng-click="orderArticlesDate()">Newest</button>
+    <button type="button" ng-click="orderArticlesDateZ()">Oldest</button>
+    </h1>
+    <div class="filler-s"></div>
+
+    <div class="faveA">
+    <div class="favorites-container">
+    <!-- Article container -->
+       <div ng-model="lynn" class="article-container" ng-repeat="fave in lynn" data-drag="true" data-jqyoui-options="{revert: 'invalid', opacity: '0.5'}" jqyoui-draggable="{index: {{$index}}, animate: true,}">
+        <button type="button" ng-click="remove_article(fave.key)" style="position:right;"><i class=" w3-xlarge fa fa-trash"></i></button>
+        <!-- Klickbara delen av articlen containern -->
+        <div ng-click="select(fave)" data-toggle="modal" data-target="#example">
+          <center>
+            <h2>{{fave.val().title}}</h2>
+            <div class="border">
+              <h4>By:{{fave.val().author}} </h4>
+              <p>{{fave.val().publishedAt | date}}</p>
+            </div>
+            <p>{{fave.val().description}}</p>
+          </center>
+        </div>
+        </div>
+      </div>
+    </div>
+
+        <div class="faveB">
+        <div class="favorites-container">
+          <!-- article container -->
+          <h1 class="category-title-slim" ng-repeat="name in likeName1">{{name}}</h1>
+          <div class="filler-m"></div>
+           <div ng-model="likes" class="article-container" ng-repeat="fave in likes">
+            <button type="button" ng-click="remove_like(fave.key)" style="position:right;"><i class=" w3-xlarge fa fa-trash"></i></button>
+            <!-- Klickbara delen av articlen containern -->
+            <div ng-click="select(fave)" data-toggle="modal" data-target="#example">
+              <center>
+                <h2>{{fave.val().title}}</h2>
+                <div class="border">
+                  <h4>By:{{fave.val().author}} </h4>
+                  <p>{{fave.val().publishedAt | date}}</p>
+                </div>
+                <p>{{fave.val().description}}</p>
+              </center>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="faveA">
+        <div class="favorites-container">
+          <!-- article container -->
+          <h1 class="category-title-slim" ng-repeat="name in likeName2">{{name}}</h1>
+          <div class="filler-m"></div>
+           <div ng-model="likes2" class="article-container" ng-repeat="fave in likes2">
+            <button type="button" ng-click="remove_like2(fave.key)" style="position:right;"><i class=" w3-xlarge fa fa-trash"></i></button>
+            <!-- Klickbara delen av articlen containern -->
+            <div ng-click="select(fave)" data-toggle="modal" data-target="#example">
+              <center>
+                <h2>{{fave.val().title}}</h2>
+                <div class="border">
+                  <h4>By:{{fave.val().author}} </h4>
+                  <p>{{fave.val().publishedAt | date}}</p>
+                </div>
+                <p>{{fave.val().description}}</p>
+              </center>
+            </div>
+            </div>
+        </div>
+        </div>
+
+
+        <div class="faveB">
+        <div class="favorites-container">
+          <!-- article container -->
+          <h1 class="category-title-slim" ng-repeat="name in likeName3">{{name}}</h1>
+          <div class="filler-m"></div>
+           <div ng-model="likes3" class="article-container" ng-repeat="fave in likes3">
+            <button type="button" ng-click="remove_like3(fave.key)" style="position:right;"><i class=" w3-xlarge fa fa-trash"></i></button>
+            <!-- Klickbara delen av articlen containern -->
+            <div ng-click="select(fave)" data-toggle="modal" data-target="#example">
+              <center>
+                <h2>{{fave.val().title}}</h2>
+                <div class="border">
+                  <h4>By:{{fave.val().author}} </h4>
+                  <p>{{fave.val().publishedAt | date}}</p>
+                </div>
+                <p>{{fave.val().description}}</p>
+              </center>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <div ng-init="get_fb()" id="favorite"></div>
+
+
+        <!-- Modal är rutan som poppar upp när man klickar på en artikel -->
+        <div class="modal custom fade" id="example" role="dialog">
+          <div class="modal-dialog">
+              <div class="modal-content">
+
+                <div class="row">
+                    <center>
+                      <div class="modal-body" style="padding-right: 20px; border-right: 4px solid #ccc;margin:20px;">
+                        <h1 id="title">{{selected.val().title}}</h1>
+                        <img ng-src="{{selected.val().urlToImage}}" class="image"></img>
+                        <h4>By:{{selected.val().author}} </h4>
+                        <p>{{selected.val().publishedAt | date}}</p>
+                        <p>{{selected.val().description}}</p>
+                        <a href="{{selected.val().url}}">Click to read whole article</a>
+                      </div>
+
+            </center>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+</div>
